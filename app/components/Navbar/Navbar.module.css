@@ -1,0 +1,46 @@
+.header {
+    padding: 2%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 20%;
+    z-index: 1;
+}
+
+.toolbar, .linksContainer{
+    display: flex;
+    justify-content: flex-start;
+   
+}   
+
+.linkContainer {
+    transition: transform 0.3s ease;  
+
+}
+
+.linkContainer:hover {
+    transform: translateY(1.5px); 
+
+}
+
+.toolbar{
+    margin-top: 0.7%;
+}
+
+.linkNavigation{
+   font-size: 1.5em;
+   color:black; 
+   padding: 22px;
+   background: rgb(2,0,36);
+   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(83,9,121,1) 0%, rgba(0,212,255,1) 100%);
+   letter-spacing: .3em;
+
+}
+
+.linkContainer{
+    margin-top: 4%;
+    padding: 2%;
+    gap: 20px;
+    
+}
+ 
