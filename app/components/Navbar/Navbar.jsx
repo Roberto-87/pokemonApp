@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { IonLabel, IonSegment, IonSegmentButton, IonToolbar } from '@ionic/react'
 import style from '../Navbar/Navbar.module.css'
 import { pressStart2P } from '../../fonts/fonts'
-import SearchBar from '../SearchBar/SearchBar'
 
 function Navbar () {
   return (
@@ -15,12 +14,12 @@ function Navbar () {
             <IonSegmentButton value='all' className={style.linkContainer}>
               <IonLabel className={pressStart2P.className}> <Link className={style.linkNavigation} href='/'> All </Link></IonLabel>
             </IonSegmentButton>
-{/*             <IonSegmentButton value='favorites' className={style.linkContainer}>
-              <IonLabel className={pressStart2P.className}> <Link className={style.linkNavigation} href='/favorites'> Favs </Link></IonLabel>
-            </IonSegmentButton> */}
+            {/*             <IonSegmentButton value='favorites' className={style.linkContainer}>
+                            <IonLabel className={pressStart2P.className}> <Link className={style.linkNavigation} href='/favorites'> Favs </Link></IonLabel>
+                          </IonSegmentButton> */}
           </IonSegment>
         </IonToolbar>
-    {/*     <SearchBar /> */}
+        {/*     <SearchBar /> */}
       </nav>
     </header>
   )

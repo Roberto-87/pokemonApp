@@ -10,7 +10,7 @@ const CardDetail = ({ pokemonData }) => {
           <Card pokemonData={pokemonData} />
         </IonCol>
       </IonRow>
-      {pokemonData && pokemonData.map(({ id, pokemon_v2_pokemonstats}) =>
+      {pokemonData && pokemonData.map(({ id, pokemon_v2_pokemonstats }) =>
         <IonCol size='12' size-md='3' sizeXl='12' size-lg='6' key={id}><br />
           <IonCardHeader className={style.statContainer}>
             <IonCardSubtitle>{pokemon_v2_pokemonstats.map((stat, index) =>

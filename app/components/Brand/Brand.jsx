@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Brand = () => {
   return (
     <Link href='/'>
-      <img width={180} style={{imageRendering: 'pixelated' }} src={brand.src} alt="Logo Pokemon" />
+      <img width={180} style={{ imageRendering: 'pixelated' }} src={brand.src} alt='Logo Pokemon' />
     </Link>
 
   )
