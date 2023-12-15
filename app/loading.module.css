@@ -1,9 +1,10 @@
 .loader {
     font-size: 2.5em;
-    animation: rotate 2s linear infinite; 
+/*     animation: rotate 2s linear infinite;  */
     color: white;
-}
 
+}
+/* 
 @keyframes rotate {
     from {
         transform: rotate(0deg);
@@ -11,10 +12,17 @@
     to {
         transform: rotate(360deg);
     }
-}
+} */
 
 .loaderContainer {
-    width: 100%;
+
     display: flex;
     justify-content: center;
+    padding: 2%
+}
+
+.loaderText{
+    letter-spacing: 2px;
+    font-size: 1em;
+    color: green;
 }

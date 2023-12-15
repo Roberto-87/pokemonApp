@@ -1,0 +1,29 @@
+
+.cardContainer{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.statContainer{
+    margin-bottom: 6px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+ 
+
+}
+
+.statBox{
+    background-color: rgba(0, 0, 0, 0.448) !important;
+    border: 1px solid #646361ac;
+    border-radius: 4px;
+    padding: 1%;
+    width: 100%;
+    margin-bottom: 1px;
+    display: flex;
+    justify-content: flex-start;
+
+
+}
+

@@ -6,7 +6,7 @@ import style from '../Navbar/Navbar.module.css'
 import { pressStart2P } from '../../fonts/fonts'
 import SearchBar from '../SearchBar/SearchBar'
 
-function Example () {
+function Navbar () {
   return (
     <header className={style.header}>
       <nav>
@@ -15,14 +15,14 @@ function Example () {
             <IonSegmentButton value='all' className={style.linkContainer}>
               <IonLabel className={pressStart2P.className}> <Link className={style.linkNavigation} href='/'> All </Link></IonLabel>
             </IonSegmentButton>
-            <IonSegmentButton value='favorites' className={style.linkContainer}>
+{/*             <IonSegmentButton value='favorites' className={style.linkContainer}>
               <IonLabel className={pressStart2P.className}> <Link className={style.linkNavigation} href='/favorites'> Favs </Link></IonLabel>
-            </IonSegmentButton>
+            </IonSegmentButton> */}
           </IonSegment>
         </IonToolbar>
-        <SearchBar />
+    {/*     <SearchBar /> */}
       </nav>
     </header>
   )
 }
-export default Example
+export default Navbar

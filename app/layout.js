@@ -1,6 +1,7 @@
 import './globals.css'
 import Navbar from './components/Navbar/Navbar'
 import { pressStart2P } from './fonts/fonts'
+import Brand from './components/Brand/Brand'
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,7 +15,7 @@ export default function RootLayout ({ children }) {
         <title>Poke App</title>
       </head>
       <body className={pressStart2P.className}>
-        <Navbar />
+        <Brand />
         {children}
       </body>
     </html>

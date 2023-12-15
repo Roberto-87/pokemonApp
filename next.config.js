@@ -1,9 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    incrementalCacheHandlerPath: require.resolve('./cache-handler.js'),
-    isrMemoryCacheSize: 0 // disable default in-memory caching
-  }
-}
+const nextConfig = {}
 
 module.exports = nextConfig
