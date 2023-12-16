@@ -26,7 +26,7 @@ function Card ({ pokemonData }) {
                     <li><span style={{ lineHeight: '1.5' }}>Base experience:</span> {base_experience}</li>
                     <li><span style={{ lineHeight: '1.5' }}> Height:  </span>{height}</li>
                     <li style={{ lineHeight: '1.5' }}>Weight: {weight}</li><br />
-                    <li><span style={{ color: '#9e00f4' }}>Abilities:</span>{pokemon_v2_pokemonabilities.map((ability, index) => <p key={index} style={{ lineHeight: '1.3' }}><MdOutlineCatchingPokemon /> {ability.pokemon_v2_ability.name}</p>)}</li>
+                    <li><span style={{ color: '#fa6b58' }}>Abilities:</span>{pokemon_v2_pokemonabilities.map((ability, index) => <p key={index} style={{ lineHeight: '1.3' }}><MdOutlineCatchingPokemon /> {ability.pokemon_v2_ability.name}</p>)}</li>
                   </ul>{/* '#860202' '#9e00f4'#9d5353 #fa6b58  */}
                 </IonCardContent>
               </IonCard>

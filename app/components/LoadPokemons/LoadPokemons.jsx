@@ -9,8 +9,8 @@ import ButtonNewPokemons from '../ButtonNewPokemons/ButtonNewPokemons'
 
 export const LoadPokemons = () => {
   const [pokemons, setPokemons] = useState([])
-  const [scrolling, setScrolling] = useState(false);
-  const [actScrollY, setActScrollY] = useState(0);
+  const [scrolling, setScrolling] = useState(false)
+  const [actScrollY, setActScrollY] = useState(0)
   const { ref, inView } = useInView()
 
   const loadMorePokemons = async () => {
@@ -21,30 +21,27 @@ export const LoadPokemons = () => {
     const { pokemon_v2_pokemon } = await dataFetch(limit)
     setPokemons(pokemons => [...pokemon_v2_pokemon, ...pokemons || []])
     window.scrollTo({
-      top:1,
-      behavior: 'smooth', 
-    });
+      top: 1,
+      behavior: 'smooth'
+    })
   }
 
-  const handleScroll = async() => {
+  const handleScroll = async () => {
     setScrolling(true)
-    const currentScrollY = window.scrollY;
+    const currentScrollY = window.scrollY
     setActScrollY(currentScrollY)
-     if(currentScrollY <1 ) {
-        loadMorePokemonsStart()      
-         setScrolling(true);
-        setScrolling(false);
-     }
-    
- } 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
+    if (currentScrollY < 1) {
+      loadMorePokemonsStart()
+      setScrolling(true)
+      setScrolling(false)
     }
-    
-  }, [scrolling]);
-
+  }
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [scrolling])
 
   useEffect(() => {
     if (inView) {
