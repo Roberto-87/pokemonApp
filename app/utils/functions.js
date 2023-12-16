@@ -3,6 +3,6 @@ export const toUpperCaseLetter = (string) => {
 }
 
 export const validationStr = (value) => {
-  const regexString = /^[A-Za-z]+$/
+  const regexString = /^[A-Za-z]+$/ 
   return regexString.test(value)
 }
