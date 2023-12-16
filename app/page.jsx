@@ -3,7 +3,7 @@ import SearchBar from './components/SearchBar/SearchBar'
 
 const Home = async () => {
   return (
-    <> 
+    <>
       <SearchBar />
       <LoadPokemons />
     </>

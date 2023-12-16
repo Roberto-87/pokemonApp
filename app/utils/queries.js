@@ -90,11 +90,10 @@ query getPokemons {
 }
 
 export function getSimilar (name) {
-  const nameLike = `${name}%`
-
+  // to find out the complete name: where: {name: {_eq:${name}}}
   return `
 query getPokemons {
-  pokemon_v2_pokemon(where: { name: { _ilike: ${nameLike}}}) { 
+  pokemon_v2_pokemon(where: {name: {_ilike: "${name}%"}}) { 
     height
     id
     base_experience
@@ -122,7 +121,7 @@ query getPokemons {
 }
 
 export function getOneRandomPokemon (limit) {
-  const randomNumber = Math.ceil(Math.random() * 898);
+  const randomNumber = Math.ceil(Math.random() * 898)
 
   return `
 query getPokemons {

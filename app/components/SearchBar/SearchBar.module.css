@@ -3,14 +3,17 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: .2%;
-   
+    padding: .1%;
+    height: 30px;
+    
 }
 
 .searchbar{
-    width: 400px;
-    height: 25px;
     background-color: rgba(110, 111, 111, 0.762);
-    border:none
-}
+
+ }
  
+.error{
+    color:red;
+    font-size: .7em;
+}

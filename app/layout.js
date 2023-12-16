@@ -1,5 +1,4 @@
 import './globals.css'
-import Navbar from './components/Navbar/Navbar'
 import { pressStart2P } from './fonts/fonts'
 import Brand from './components/Brand/Brand'
 
