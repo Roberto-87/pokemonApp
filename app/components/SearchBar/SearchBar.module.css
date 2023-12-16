@@ -8,10 +8,20 @@
     
 }
 
+@media screen and (max-width:400px) {
+    .searchbarContainer{
+        width: 20%;
+        display: block;
+    }
+}
+
 .searchbar{
     background-color: rgba(110, 111, 111, 0.762);
+}
 
- }
+.cancelSearch{
+    padding:4px;
+}
  
 .error{
     color:red;

@@ -27,6 +27,9 @@ const SearchBar = () => {
     const name = e.target.value
     setName(name)
   }
+  const onHandleCancel = () => {
+    setName('')
+  }
   useEffect(() => {
     validationStr(name) ? sendData() : setError(true)
   }, [name])
@@ -35,6 +38,7 @@ const SearchBar = () => {
     <>
       <section className={style.searchbarContainer}>
         <input placeholder='Search a Pokemon' onChange={onHandleChange} name='name' value={name} type='text' />
+        <button className={style.cancelSearch} onClick={onHandleCancel}>X</button>
       </section>
       {pokemon && name && <Card pokemonData={pokemon} />}
     </>

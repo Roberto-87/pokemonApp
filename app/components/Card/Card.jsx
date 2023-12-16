@@ -12,12 +12,12 @@ function Card ({ pokemonData }) {
       <IonGrid>
         <IonRow>
           {pokemonData && pokemonData.map(({ id, name, height, base_experience, weight, pokemon_v2_pokemonabilities, pokemon_v2_pokemontypes }) =>
-            <IonCol size-md={pokemonData.length > 1 ? '6' : '12'} sizeLg='6' size-xl={pokemonData.length > 1 ? '4' : '12'} key={id}><br />
+            <IonCol size-md={pokemonData.length > 1 ? '6' : '12'} sizeSm='6' sizeLg='4' sizeXs='12' size-xl={pokemonData.length > 1 ? '4' : '12'} key={id}><br />
               <IonCard>
                 <img style={{ width: '12vw', imageRendering: 'pixelated' }} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} alt={name} />
                 <IonCardHeader>
                   <Link href='/[id]' as={`/${id}`}>
-                    <IonCardTitle><h2 style={{ color: '#ffcd05', letterSpacing: '1.2px' }}>{toUpperCaseLetter(name)}</h2></IonCardTitle>
+                    <IonCardTitle><h2 style={{ color: '#ffcd05', letterSpacing: '1.2px', overflowWrap: 'break-word' }}>{toUpperCaseLetter(name)}</h2></IonCardTitle>
                   </Link>
                   <IonCardSubtitle style={{ lineHeight: '1.5' }}>Type:{pokemon_v2_pokemontypes.map((type) => type.pokemon_v2_type.name)}</IonCardSubtitle>
                 </IonCardHeader>
