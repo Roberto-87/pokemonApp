@@ -1,9 +1,16 @@
 .searchbarContainer{
-    margin-top: 5%;
+    margin-top: .1%;
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 2%;
+    padding: .2%;
    
+}
+
+.searchbar{
+    width: 400px;
+    height: 25px;
+    background-color: rgba(110, 111, 111, 0.762);
+    border:none
 }
  

@@ -88,3 +88,67 @@ query getPokemons {
 }
 `
 }
+
+export function getSimilar (name) {
+  const nameLike = `${name}%`
+
+  return `
+query getPokemons {
+  pokemon_v2_pokemon(where: { name: { _ilike: ${nameLike}}}) { 
+    height
+    id
+    base_experience
+    name
+    weight
+    pokemon_v2_pokemontypes{
+      pokemon_v2_type{
+        name
+      }
+    }
+    pokemon_v2_pokemonstats {
+      base_stat
+      pokemon_v2_stat {
+        name
+      }
+    }
+    pokemon_v2_pokemonabilities{
+      pokemon_v2_ability{
+        name
+      }
+    }
+  }
+}
+`
+}
+
+export function getOneRandomPokemon (limit) {
+  const randomNumber = Math.ceil(Math.random() * 898);
+
+  return `
+query getPokemons {
+  pokemon_v2_pokemon(limit: ${limit}, where: {id: { _in:${randomNumber}}}) { 
+    height
+    id
+    base_experience
+    name
+    weight
+    pokemon_v2_pokemontypes{
+      pokemon_v2_type{
+        name
+      }
+    }
+    pokemon_v2_pokemonstats {
+      base_stat
+      pokemon_v2_stat {
+        name
+      }
+    }
+    pokemon_v2_pokemonabilities{
+      pokemon_v2_ability{
+        name
+      }
+    }
+  }
+}
+`
+}

@@ -1,5 +1,4 @@
 'use client'
-import Navbar from '../components/Navbar/Navbar'
 import CardDetail from '../components/CardDetail/CardDetail'
 import { useState, useEffect } from 'react'
 import { getOnePokemonData } from '../utils/dataFetching'
